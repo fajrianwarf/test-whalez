@@ -1,0 +1,106 @@
+// GIT
+What is a Merge conflict in Git and how can it be resolved ?
+Merge conflict adalah suatu masalah yang terjadi disaat proses starting merging di Git (dikarenakan masih ada 
+perubahan dalam working directory area) ataupun disaat tengah-tengah proses merging itu sendiri (dikarenakan ada conflict pada
+codingan yang akan dimerge). Untuk meresolve merge conflict pada proses starting bisa commit codingan tersebut atau dibatalkan perubahaanya,
+sedangkan untuk merge conflict pada tengah-tengah proses merging bisa meresolvenya secara manual apa yang akan dipertahankan atau dibuang kodenya.
+
+What is Git stash ? 
+git stash itu merecord working directory secara sementara di local tanpa commit terlebih dahulu sehingga bisa melanjutkan pekerjaan
+dengan clean working directory dan men-commitnya kalau sudah diperlukan.
+
+Differentiate between Git Merge and Git Rebase ?
+merge : menggabungkan perubahan ke suatu branch dan membuat merge commit juga full history dari branch masih tercantum.
+rebase : menggabungkan perubahan ke suatu branch, tidak membuat merge commit serta history dari branch dimerge juga.
+
+// HTML
+- In HTML how do you separate a section of text ?
+Saya biasanya menggunakan tag <p> untuk section text.
+
+- How do you need Create Nested Web Pages in HTML ?
+Memakai tag embed atau iframe.
+
+- What is SVG in HTML ?
+Scalable Vector Graphic yang bisa dirender pada ukuran apapun dan tidak blur.
+
+
+// CSS
+- What are SASS, Less, and stylus ?
+CSS preprocessor yang memiliki banyak fitur yang mempermudah penggunaan CSS dan bisa digunakan untuk kompakbilitas di beberapa
+variasi versi CSS.
+
+- What is the best way to include styling in HTML ?
+External stylesheet (reusable and more readable).
+
+- Explain Box Sizing Property !
+content-box : default css, border dan padding mempengaruhi total ukuran dari suatu konten walaupun width dan lengthnya sudah ditentukan 
+              (jadi bisa lebih besar dari width dan length jikalau ditambahkan padding dan border)
+border-box : total ukuran border dan padding tidak mempengaruhi ukuran luar konten (width & length yang sudah ditentukan)  
+
+
+// JavaScript
+- What are various Data Types in JavaScript ?
+tipe data primitif : boolean, null, undefined, number, bigint, string, symbol
+tipe data objects: object literal, array, function
+
+- What is callback in JavaScript ?
+fungsi yang sebagai argumen di fungsi yang lain, dan dieksekusi setelah kondisi dari fungsi tersebut terpenuhi atau fungsi yang lainnya sudah selesai dieksekusi 
+
+- What do you understand about cookies in JavaScript ?
+cookie adalah data yang disimpan pada computer client, biasanya digunakan untuk memverivikasi user pernah login atau sejenisnya.
+hanya sedikit data yang bisa disimpan dalam cookie yaitu sekitar 4kb per cookie
+ada 3 jenis cookie : first-party (yang hanya bisa dilihat website user saja), third-party (data untuk iklan2), dan session cookie (dihapus setelah satu sesi / website ditutup)
+
+- What are closures in JavaScript ?
+Scoping di JavaScript, dimana scope lokal bisa mengakses parent atau global scope, tetapi tidak sebaliknya
+
+- What is the best way to remove Duplicates from a JavaScript Array ?
+Memakai Set dan spread syntax : [ ...new Set(array)] 
+atau filter dan indexOf : array.filter((item, index, arr) => arr.indexOf(item) == index )
+
+- Please explain self invoking and its syntax !
+self invoking adalah eksekusi langsung dari fungsi yang baru dibuat
+(function (parameter) {
+    // codingan
+}})(argumen)
+
+
+// ReactJS 5 points
+- What are React Extensions ? Name a few of them !
+ekstensi yang mempermudah kodingan react. Simple react snippet, ES7+ React/Redux/React-Native snippets
+
+- What is an Event in React? How do you create one ?
+Event adalah aksi yang bisa dieksekusi saat user melakukan seuatu tindakan tertentu.
+Biasanya saya membuat suatu fungsi dan memasukkannya di event handler jsx, dan memastikan page tidak merefresh (preventdDefault untuk event yang khusus)
+
+- What are components in ReactJS ?
+komponen adalah seperti blok koding yang bisa reusable dan bisa digunakan sebagai kondisional render, 
+untuk mempermudah pembuatan app sehingga tidak sampai mengetik semua kodingannya (hardcode).
+
+- What is a State in React ? How do you implement it ?
+state adalah semacam object yang bisa menampung suatu value dan bisa digunakan untuk menangani & mengolah data dari suatu komponen selama komponen itu masih ada.
+
+- What is higher order and pure components in React ? Explain with example code !
+Higher order components adalah suatu fungsi yang mengambil components sebagai argumen dan mereturn componen baru yang reusable
+Pure components adalah sama seperti component biasa tetapi hanya merender disaat ada perbedaan di state atau props saat ini.
+
+Pure component & higher order component
+
+import React form 'react'
+
+function Label({name, home= 'semarang'}) {
+    return (
+        <div>
+            <p>{name}</p>
+            <p>{home}</p>
+        </div>
+    )
+}
+
+function arePropsEqual(prev, next) {
+    return prev.name === next.name
+}
+
+export default React.memo(Label, arePropsEqual)
+
+
