@@ -36,7 +36,7 @@ const removeDuplicate = (arr) => {
 };
 
 // console.log('Remove duplicate :', removeDuplicate([1,3,3,3,3,3,1,3,3,1,1,1,5,6,7,9,6,10,6,10,10,1,1,2]));
-console.log('Remove duplicate :', removeDuplicate([1,3,3,3,1,5,6,7,8,1]));
+// console.log('Remove duplicate :', removeDuplicate([1,3,3,3,1,5,6,7,8,1]));
 
 // Reverse in place
 const reverse = (str) => {
@@ -49,7 +49,7 @@ const reverse = (str) => {
   return reverseStr.join(' ');
 };
 
-console.log('Reverse in place :', reverse('what is your name'));
+// console.log('Reverse in place :', reverse('what is your name'));
 // console.log('Reverse in place :', reverse('red dead redemption yeah'));
 
 // First no repeating char
